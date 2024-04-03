@@ -19,7 +19,7 @@ const ChatForm = ({ user, onMessage }) => {
   };
 
   return (
-    <div>
+    <div className="mt-5">
       <form className="input-group" onSubmit={handleOnMessage}>
         <input
           type="text"
@@ -28,8 +28,11 @@ const ChatForm = ({ user, onMessage }) => {
           value={value}
           onChange={handleInput}
         />
-        <div className="input-group-append">
-          <button className="btn submit-button" disabled={isDisabled}>
+        <div className="input-group-append mt-2">
+          <button
+            className="btn submit-button p-2 rounded-sm"
+            disabled={isDisabled}
+          >
             SEND
           </button>
         </div>
